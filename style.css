@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f4f4f4;
+}
+
+#userDataDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 1%;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(24% - 2%);
+  max-width: calc(
+    24% - 2%
+  ); 
+}
+
+.user-card h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.user-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.address h3,
+.company h3 {
+  font-size: 1em;
+  color: #444;
+}
+
+@media screen and (max-width: 768px) {
+  .user-card {
+    flex: 0 0 calc(48% - 2%); /* makes it roughly 2 cards in a row on medium screens */
+    max-width: calc(48% - 2%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user-card {
+    flex: 0 0 100%; /* makes it 1 card per row on smaller screens */
+    max-width: 100%;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#searchField {
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 50px;
+  outline: none;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1em;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#searchField::placeholder {
+  color: #888;
+}
+
+#searchField:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.02); 
+}
